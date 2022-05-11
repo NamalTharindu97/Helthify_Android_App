@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="openBodyFatHome">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#034c81"
+            app:title=" Home"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/homejpg"
+        android:layout_width="419dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/homejpg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:srcCompat="@drawable/home" />
+
+    <Button
+        android:id="@+id/bmi_calculator_btn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="48dp"
+        android:onClick="openBmiHome"
+        android:text="@string/bmi_calculator_btn"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintEnd_toStartOf="@+id/daily_calary_calculator_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homejpg" />
+
+    <Button
+        android:id="@+id/daily_calary_calculator_btn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="@string/daily_calary_calculator_btn"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bmi_calculator_btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/body_fat_cal_btn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:onClick="openBodyFatHome"
+        android:text="@string/body_fat_cal_btn"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/body_shape_cal_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmi_calculator_btn"
+        app:layout_constraintVertical_bias="0.659" />
+
+    <Button
+        android:id="@+id/body_shape_cal_btn"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:onClick="openShapeForm"
+        android:text="@string/body_shape_cal_btn"
+        app:backgroundTint="@color/purple_700"
+        app:layout_constraintBaseline_toBaselineOf="@+id/body_fat_cal_btn"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/helthify"
+        android:layout_width="220dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/helthify"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/homejpg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="115dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/homehart" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BodyFat.bodyFatCalculatorHome">
+
+    <ImageView
+        android:id="@+id/swimimg"
+        android:layout_width="549dp"
+        android:layout_height="985dp"
+        android:contentDescription="@string/swim"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/swimmer2" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            style="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#034c81"
+            app:title="Body Fat Calculator"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <Button
+        android:id="@+id/calculateMyBodyFat_btn"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="452dp"
+        android:onClick="openForm"
+        android:text="@string/calculateMyBodyFat_btn"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <Button
+        android:id="@+id/myrecords_btn"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:onClick="openRecords"
+        android:text="@string/myrecords_btn"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/blue2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateMyBodyFat_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
